@@ -39,7 +39,7 @@ const Cart = () => {
                         from: "cart"
                     }
                 })
-                axios.post('/delete-cart').then(res => {
+                axios.post('https://realtime-food-ordering-server.herokuapp.com/delete-cart').then(res => {
                     localStorage.removeItem("cart");
                     localStorage.setItem("cart", JSON.stringify({ items: {}, totalPrice: 0, totalQty: 0 }))
                     setCart({
