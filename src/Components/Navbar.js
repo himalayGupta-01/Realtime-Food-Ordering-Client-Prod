@@ -37,7 +37,7 @@ const Navbar = () => {
                             <NavLink exact activeClassName="nav-link active" aria-current="page" to="/">Home</NavLink>
                         </li>
                         <li className=" ml-6">
-                            <NavLink activeClassName="nav-link active" to="/contact">Contact</NavLink>
+                            <NavLink activeClassName="nav-link active" to="/contact">Contact Us</NavLink>
                         </li>
 
                         {auth.authenticate ?
