@@ -56,7 +56,7 @@ const Home = () => {
 
 
     function updateCart(item) {
-        axios.post('/update-cart', item).then(res => {
+        axios.post('https://realtime-food-ordering.herokuapp.com/update-cart', item).then(res => {
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
             cartCounter.innerText = res.data.totalQty;
         })
