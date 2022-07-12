@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://realtime-food-ordering.herokuapp.com/",
+  "proxy": "https://realtime-food-ordering-server.herokuapp.com/",
   "dependencies": {
     "@craco/craco": "^6.3.0",
     "@react-icons/all-files": "^4.1.0",
