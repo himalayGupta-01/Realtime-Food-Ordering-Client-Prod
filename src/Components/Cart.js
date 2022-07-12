@@ -70,6 +70,7 @@ const Cart = () => {
 
     //incrementing value of a item in cart
     const increment = (item) => {
+        console.log(item);
         axios.post("https://realtime-food-ordering-server.herokuapp.com/increase-cart", item).then(res => {
             localStorage.removeItem("cart");
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
@@ -82,6 +83,7 @@ const Cart = () => {
 
     //decrementing value of a item in cart
     const decrement = (item) => {
+        console.log(item);
         axios.post('https://realtime-food-ordering-server.herokuapp.com/decrease-cart', item).then(res => {
             localStorage.removeItem("cart");
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
@@ -94,6 +96,7 @@ const Cart = () => {
 
     // removing item from cart
     const removeItem = (item) => {
+        console.log(item);
         axios.post(`https://realtime-food-ordering-server.herokuapp.com/remove-from-cart`, item).then(res => {
             localStorage.removeItem("cart");
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
