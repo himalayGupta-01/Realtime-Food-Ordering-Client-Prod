@@ -85,7 +85,7 @@ const Home = () => {
 
     return (
         <>
-            <section className="hero py-5">
+            <section className="py-5"> {/* hero class added here */}
                 <div className=" container mx-auto flex items-center justify-between">
                     <div className=" px-32 w-1/2">
                         <h6 className=" text-lg pb-4"><em>Are you hungry?</em></h6>
@@ -98,7 +98,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="hero py-5">
+            <section className="hero py-5"> 
                 <div className="menu container mx-auto py-8">
                     {makeMenu().map((category) => {
                         return (
