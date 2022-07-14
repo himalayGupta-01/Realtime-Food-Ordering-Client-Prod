@@ -56,9 +56,7 @@ const Home = () => {
 
 
     function updateCart(item) {
-        console.log("Update Sending item as ", item)
         axios.post('https://realtime-food-ordering-server.herokuapp.com/update-cart', item,{withCredentials:true}).then(res => {
-            console.log("result of updating is ", res.data)
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
             cartCounter.innerText = res.data.totalQty;
         })
