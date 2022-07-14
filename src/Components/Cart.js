@@ -39,7 +39,7 @@ const Cart = () => {
                         from: "cart"
                     }
                 })
-                axios.post('https://realtime-food-ordering-server.herokuapp.com/delete-cart',{headers:{'Content-Type': 'application/json;charset=UTF-8'},withCredentials:true}).then(res => {
+                axios.post('https://realtime-food-ordering-server.herokuapp.com/delete-cart',{withCredentials:true}).then(res => {
                     localStorage.removeItem("cart");
                     localStorage.setItem("cart", JSON.stringify({ items: {}, totalPrice: 0, totalQty: 0 }))
                     setCart({
@@ -70,8 +70,9 @@ const Cart = () => {
 
     //incrementing value of a item in cart
     const increment = (item) => {
-        console.log(item);
-        axios.post("https://realtime-food-ordering-server.herokuapp.com/increase-cart", item,{headers:{'Content-Type': 'application/json;charset=UTF-8'},withCredentials:true}).then(res => {
+        console.log("Incrememt sending item is ",item);
+        axios.post("https://realtime-food-ordering-server.herokuapp.com/increase-cart", item,{withCredentials:true}).then(res => {
+            console.log("Increment result is ",res.data)
             localStorage.removeItem("cart");
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
             setCart({
@@ -83,8 +84,9 @@ const Cart = () => {
 
     //decrementing value of a item in cart
     const decrement = (item) => {
-        console.log(item);
+        console.log("Decrement sending item is ",item);
         axios.post('https://realtime-food-ordering-server.herokuapp.com/decrease-cart', item,{withCredentials:true}).then(res => {
+            console.log("Decrement result is ",res.data)
             localStorage.removeItem("cart");
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
             setCart({
@@ -96,8 +98,9 @@ const Cart = () => {
 
     // removing item from cart
     const removeItem = (item) => {
-        console.log(item);
+        console.log("removeitem result is ",res.data)
         axios.post(`https://realtime-food-ordering-server.herokuapp.com/remove-from-cart`, item,{withCredentials:true}).then(res => {
+            console.log("removeitem result is ",res.data)
             localStorage.removeItem("cart");
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
             setCart({
