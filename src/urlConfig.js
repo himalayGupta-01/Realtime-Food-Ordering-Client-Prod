@@ -1,4 +1,4 @@
-export const api="https://realtime-food-ordering-server.onrender.com/"
+export const api=REACT_APP_SERVER_PROD
 export const generatePublicUrl=(filename)=>{
-    return `https://realtime-food-ordering-server.onrender.com/${filename}`;
+    return REACT_APP_SERVER_PROD+filename;
 }

@@ -56,7 +56,7 @@ const Home = () => {
 
 
     function updateCart(item) {
-        axios.post('https://realtime-food-ordering-server.onrender.com/update-cart', item,{withCredentials:true}).then(res => {
+        axios.post(`${REACT_APP_SERVER_PROD}update-cart`, item,{withCredentials:true}).then(res => {
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
             cartCounter.innerText = res.data.totalQty;
         })

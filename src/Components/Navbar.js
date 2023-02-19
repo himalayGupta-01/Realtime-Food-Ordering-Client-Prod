@@ -17,7 +17,7 @@ const Navbar = () => {
     const [cartValue, setCartValue] = useState("");
 
     useEffect(() => {
-        axios.get('https://realtime-food-ordering-server.onrender.com/cart').then(async res => {
+        axios.get(`${REACT_APP_SERVER_PROD}cart`).then(async res => {
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
             await setCartValue(res.data.totalQty);
         })

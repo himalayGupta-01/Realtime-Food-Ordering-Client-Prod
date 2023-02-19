@@ -39,7 +39,7 @@ const Cart = () => {
                         from: "cart"
                     }
                 })
-                axios.post('https://realtime-food-ordering-server.onrender.com/delete-cart',{withCredentials:true}).then(res => {
+                axios.post(`${REACT_APP_SERVER_PROD}delete-cart`,{withCredentials:true}).then(res => {
                     localStorage.removeItem("cart");
                     localStorage.setItem("cart", JSON.stringify({ items: {}, totalPrice: 0, totalQty: 0 }))
                     setCart({
@@ -70,7 +70,7 @@ const Cart = () => {
 
     //incrementing value of a item in cart
     const increment = (item) => {
-        axios.post("https://realtime-food-ordering-server.onrender.com/increase-cart", item,{withCredentials:true}).then(res => {
+        axios.post(`${REACT_APP_SERVER_PROD}increase-cart`, item,{withCredentials:true}).then(res => {
             localStorage.removeItem("cart");
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
             setCart({
@@ -82,7 +82,7 @@ const Cart = () => {
 
     //decrementing value of a item in cart
     const decrement = (item) => {
-        axios.post('https://realtime-food-ordering-server.onrender.com/decrease-cart', item,{withCredentials:true}).then(res => {
+        axios.post(`${REACT_APP_SERVER_PROD}decrease-cart`, item,{withCredentials:true}).then(res => {
             localStorage.removeItem("cart");
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
             setCart({
@@ -94,7 +94,7 @@ const Cart = () => {
 
     // removing item from cart
     const removeItem = (item) => {
-        axios.post(`https://realtime-food-ordering-server.onrender.com/remove-from-cart`, item,{withCredentials:true}).then(res => {
+        axios.post(`${REACT_APP_SERVER_PROD}remove-from-cart`, item,{withCredentials:true}).then(res => {
             localStorage.removeItem("cart");
             localStorage.setItem("cart", JSON.stringify(res.data.session.cart))
             setCart({
