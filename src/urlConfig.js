@@ -1,4 +1,4 @@
-export const api=REACT_APP_SERVER_PROD
+export const api=process.env.REACT_APP_SERVER_PROD
 export const generatePublicUrl=(filename)=>{
-    return REACT_APP_SERVER_PROD+filename;
+    return process.env.REACT_APP_SERVER_PROD+filename;
 }
