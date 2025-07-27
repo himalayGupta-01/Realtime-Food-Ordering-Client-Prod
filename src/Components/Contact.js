@@ -72,9 +72,9 @@ const Contact = () => {
                                     <div className="contact_info_text">
                                         <a className='text-green-600' href="mailto:akashagrawalecs@gmail.com">akashagrawalecs@gmail.com</a>
                                     </div>
-                                    <div className="contact_info_text">
+                                    /*<div className="contact_info_text">
                                         <a className='text-green-600' href="mailto:himalay9644@gmail.com">himalay9644@gmail.com</a>
-                                    </div>
+                                    </div>*/
                                 </div>
                             </div>
                             <div className="contact_info_item flex justify-evenly items-center shadow-lg">
@@ -94,9 +94,9 @@ const Contact = () => {
                                     <div className="text-emerald-400 text-center contact_info_title">
                                         <b>Phone</b>
                                     </div>
-                                    <div className="contact_info_text">
+                                    /*<div className="contact_info_text">
                                         <a className='text-blue-600' href="tel:+91 8817 836 377">+91 8817 836 377</a>
-                                    </div>
+                                    </div>*.
                                     <div className="contact_info_text">
                                         <a className='text-blue-600' href="tel:+91 9644 622 667">+91 9644 622 667</a>
                                     </div>
