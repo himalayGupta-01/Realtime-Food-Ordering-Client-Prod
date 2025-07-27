@@ -69,12 +69,12 @@ const Contact = () => {
                                     <div className=" text-center contact_info_title">
                                         <b>Mail</b>
                                     </div>
-                                    <div className="contact_info_text">
-                                        <a className='text-green-600' href="mailto:akashagrawalecs@gmail.com">akashagrawalecs@gmail.com</a>
-                                    </div>
                                     {/*<div className="contact_info_text">
-                                        <a className='text-green-600' href="mailto:himalay9644@gmail.com">himalay9644@gmail.com</a>
+                                        <a className='text-green-600' href="mailto:akashagrawalecs@gmail.com">akashagrawalecs@gmail.com</a>
                                     </div>*/}
+                                    <div className="contact_info_text">
+                                        <a className='text-green-600' href="mailto:himalay9644@gmail.com">himalay9644@gmail.com</a>
+                                    </div>
                                 </div>
                             </div>
                             <div className="contact_info_item flex justify-evenly items-center shadow-lg">
